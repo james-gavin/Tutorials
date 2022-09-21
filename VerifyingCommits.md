@@ -81,4 +81,29 @@ You may encounter an error when commiting and the following command should fix i
 export GPG_TTY=$(tty)
 ```
 
+If you would like a long term fix for this solution do the following.
+
+```
+vi ~/.bash_profile
+```
+
+Next add the following lines
+
+```
+export GPG_TTY=$(tty)
+
+if [ -f ~/.bashrc ]; then
+. ~/.bashrc
+fi
+```
+
+Next source the file by running:
+
+```
+source ~/.bash_profile
+```
+
+Note you may not need to add the if statement if it is already present. This ensure that other scripts are sourced.
+
 Learn more here: https://stackoverflow.com/questions/57591432/gpg-signing-failed-inappropriate-ioctl-for-device-on-macos-with-maven
+Also here: https://superuser.com/questions/1604638/ubuntu-color-text-in-terminal-not-showing-up-unless-i-run
