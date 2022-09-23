@@ -33,4 +33,16 @@ Click "Add SSH Key" to finish adding it.
 
 ## Notes
 
+If you would like to test if everything worked run the following command:
+
+```
+ssh -T git@github.com
+```
+
+You should get an output like this:
+
+```
+Hi james-gavin! You've successfully authenticated, but GitHub does not provide shell access.
+```
+
 When copying a github repository make sure you select "SSH" instead of "HTTPS" as your remote origin.
