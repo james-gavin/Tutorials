@@ -52,6 +52,8 @@ The part marked `THIS_KEY_ID` is something you should copy to your clipboard rig
 
 ## Step 4: Export the key to GitHub
 
+*NOTE: Your email you used for the GPG key has to be the same as your local Git config email. The email should be the one you used for GitHub*
+
 We need to get the public key block. To do this run the following command replacing [THIS_KEY_ID] with your key id you copied earlier.
 
 ```
