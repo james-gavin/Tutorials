@@ -18,17 +18,17 @@ Next copy the output of your PUBLIC key:
 cat ~/.ssh/id_rsa.pub
 ```
 
-![Key Button Image](/img/PublicKey.png)
+![What the above output looks like](GitAndKeys/img/PublicKey.png)
 
 ## Step 2: Add the key to GitHub
 
 Go to https://github.com/settings/keys and click "New SSH key"
 
-![Key Button Image](/img/UploadKey.png)
+![Key Button Image](GitAndKeys/img/UploadKey.png)
 
 You should name the key from where you would be using the key from.
 
-![Save Key Image](/img/SaveKey.png)
+![Save Key Image](GitAndKeys/img/SaveKey.png)
 
 Click "Add SSH Key" to finish adding it.
 
