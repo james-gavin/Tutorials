@@ -21,12 +21,12 @@ C:\Users\YOUR_USERNAME\.ssh
 
 Go to the directory where you key is located.
 
-![Shows an image of what the folder should look like](/img/FileExplorer.png)
+<img src="img/FileExplorer.png">
 
 Next Right-Click 'id_rsa.pub' and click open with Notepad. If you do not have Notepad use another
 text editor.
 
-![Shows an image of how to open with notepad](/img/OpenWithNotepad.png)
+<img src="img/OpenWithNotepad.png">
 
 Copy the contents of the public key and save it for the next step.
 
@@ -34,11 +34,12 @@ Copy the contents of the public key and save it for the next step.
 
 Go to https://github.com/settings/keys and click "New SSH key"
 
-![Key Button Image](/img/UploadKey.png)
+<img src="img/UploadKey.png">
 
 You should name the key from where you would be using the key from.
 
-![Save Key Image](GitAndKeys/img/SaveKey.png)
+<img src="img/SaveKey.png">
+
 
 Click "Add SSH Key" to finish adding it.
 
