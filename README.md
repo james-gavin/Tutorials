@@ -1,7 +1,6 @@
 # Tutorials
-I will be attempting to write down everything I learn that I want to repeat again at another time.
+These tutorials aim to provide myself and others a resource to solve common issues when programming.
 
-So far the following tutorials exist:
-
-1. How to add an ssh key to GitHub
-2. How to get the verified badge on your commits with GitHub
+Most of these tutorials are written for Ubuntu or Windows. Personally I feel that these two OS can
+cover most problems in any OS I have dealt with. If need be more tutorials for different operating
+systems will be created.

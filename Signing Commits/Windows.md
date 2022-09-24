@@ -1,22 +1,15 @@
-# GitHub
+# Windows
 
-In this Tutorial we will learn how to get the verified badge with our commits to GitHub. This also signs every commit you make with Git.
-
-1. Install GPG
-2. Generate a new GPG key
-3. Verify the new GPG key
-4. Export the key to GitHub
-5. Configure git to always sign your commits
+In this tutorial we will learn how to sign our commits and verify them on GitHub.
 
 ## Step 1: Install GPG
 
-On an Ubuntu Machine it may already be installed but you may run this command if it is not:
-
-```
-sudo apt install gnupg
-```
+I recommend using https://gpg4win.org/. It may ask for a donation when downloading, but you can just
+select 0, and it will let you continue.
 
 ## Step 2: Generate a new GPG key
+
+The rest of the steps can be run from the terminal after installing.
 
 Run the following command to create a new GPG key:
 
@@ -29,7 +22,7 @@ Option 2: `4096`
 Option 3: `0`
 Option 4: `y`
 
-Rest fill out with your personal information. Then you will assigned a passphrase to this key. I recommend adding one because then people cannot create commits without you entering in the password.
+Rest fill out with your personal information. Then you will assign a passphrase to this key. I recommend adding one because then people cannot create commits without you entering in the password.
 
 ## Step 3: Verify the new GPG Key
 
@@ -70,42 +63,17 @@ Click on "New GPG key" and paste in your copied public key block. Name it someth
 
 To make git sign your commits with your GPG key run the following commands:
 
+*If you run 'where.exe gpg' it will tell you the correct file path for the last command.*
+
 ```
 git config --global user.signingkey [THIS_KEY_ID]
 git config --global commit.gpgsign true
+git config --global gpg.program "C:\Program Files (x86)\GnuPG\bin\gpg.exe"
 ```
 
-## Notes
+# Note
 
-You may encounter an error when commiting and the following command should fix it.
-
+Your local git email most match the email you used in your gpg key creation. To make sure it is run:
 ```
-export GPG_TTY=$(tty)
+git config --global user.email "[KEY_EMAIL]"
 ```
-
-If you would like a long term fix for this solution do the following.
-
-```
-vi ~/.bash_profile
-```
-
-Next add the following lines
-
-```
-export GPG_TTY=$(tty)
-
-if [ -f ~/.bashrc ]; then
-. ~/.bashrc
-fi
-```
-
-Next source the file by running:
-
-```
-source ~/.bash_profile
-```
-
-Note you may not need to add the if statement if it is already present. This ensure that other scripts are sourced.
-
-Learn more here: https://stackoverflow.com/questions/57591432/gpg-signing-failed-inappropriate-ioctl-for-device-on-macos-with-maven
-Also here: https://superuser.com/questions/1604638/ubuntu-color-text-in-terminal-not-showing-up-unless-i-run
