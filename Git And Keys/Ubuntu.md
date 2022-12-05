@@ -1,6 +1,6 @@
 # Ubuntu
 
-In this Tutorial we wil learn how to commit our changes to git using SSH with Ubuntu.
+In this Tutorial we will learn how to commit our changes to git using SSH with Ubuntu.
 
 ## Step 1: Create a key
 
