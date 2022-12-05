@@ -18,9 +18,9 @@ In most cases you will want to set their password so they can either sign in or 
 
 Run the following command to set their password (you may need to sudo it):
 
-'''
+```
 passwd username
-'''
+```
 
 ## Step 3: Transfer their public ssh keys to the
 
@@ -34,26 +34,28 @@ For most of the tutorial you have been acting as *not* the user you created so w
 
 First run this command to ensure the directory is owned by the new user:
 
-'''
+```
 chown -R username:username /home/username/.ssh
-'''
+```
 
 Next run these commands to ensure only the new user has permissions to access their .ssh:
 
-'''
+```
 chmod 700 /home/username/.ssh
 chmod 600 /home/username/.ssh/authorized_keys
-'''
+```
 
 ## Step 5: (Optional) Grant them sudo access
 
 If you so choose you can grant this new user sudo access with the following command:
 
-'''
+```
 sudo usermod -a -G sudo username
-'''
+```
 
 They will use the password you set for them eariler to use sudo. They can always change their password by running:
 
-'''passwd username'''
+```
+passwd username
+```
 
