@@ -69,6 +69,15 @@ git config --global user.signingkey [THIS_KEY_ID]
 git config --global commit.gpgsign true
 ```
 
+It is important to note that you should also configure your other git global values like the following.
+
+```
+git config --global user.name "FIRST_NAME LAST_NAME"
+git config --global user.email "MY_NAME@example.com"
+```
+
+This ensures that when you sign a commit it also has your name on it and email.
+
 ## Notes
 
 You may encounter an error when commiting and the following command should fix it.
